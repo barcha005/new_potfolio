@@ -3,248 +3,348 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KohWeb — Website Services in Gilgit | Business Websites, Hotels, Shops & Academies</title>
-<meta name="description" content="KohWeb: Professional websites for local businesses in Gilgit and across Pakistan. Hotels, restaurants, shops and academies. WhatsApp button, Google Map, mobile design and basic SEO. Prices from Rs. 20,000.">
+<title>KohWeb — Professional Websites for Businesses in Gilgit & Across Pakistan</title>
+<meta name="description" content="KohWeb builds professional, mobile-friendly websites for hotels, restaurants, shops and academies in Gilgit and across Pakistan. WhatsApp enquiry button, Google Maps and basic SEO included. Packages from Rs. 20,000.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: Arial, Helvetica, sans-serif; color:#1a2b25; background:#f7faf8; line-height:1.6; }
-  a { text-decoration:none; }
-  .wrap { max-width:1000px; margin:0 auto; padding:0 20px; }
-  header { background:#0d3b2e; color:#fff; padding:14px 0; position:sticky; top:0; z-index:10; }
-  header .wrap { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
-  .logo { font-size:20px; font-weight:bold; color:#fff; }
-  .logo span { color:#7bd88f; }
-  nav a { color:#d9efe2; margin-left:18px; font-size:15px; }
-  nav a:hover { color:#fff; }
-  .hero { background:linear-gradient(135deg,#0d3b2e,#14624c); color:#fff; padding:70px 0 60px; text-align:center; }
-  .hero h1 { font-size:38px; line-height:1.25; margin-bottom:16px; }
-  .hero h1 span { color:#7bd88f; }
-  .hero p { font-size:18px; color:#d9efe2; max-width:700px; margin:0 auto 28px; }
-  .btn { display:inline-block; background:#22a55b; color:#fff; padding:14px 30px; border-radius:8px; font-size:17px; font-weight:bold; margin:4px; }
-  .btn:hover { background:#1b8a4b; }
-  .btn.light { background:#fff; color:#0d3b2e; }
-  .trust { background:#fff; border-bottom:1px solid #e2ece6; padding:18px 0; text-align:center; font-size:15px; }
-  .trust b { color:#0d3b2e; margin:0 14px; display:inline-block; }
-  section { padding:56px 0; }
-  h2 { font-size:28px; text-align:center; margin-bottom:8px; color:#0d3b2e; }
-  .sub { text-align:center; color:#5a6f66; margin-bottom:34px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
-  .card { background:#fff; border:1px solid #e2ece6; border-radius:12px; padding:26px; }
-  .card h3 { font-size:20px; margin-bottom:8px; color:#0d3b2e; }
-  .card p { color:#44564e; font-size:15px; }
-  .card .tag { display:inline-block; background:#e6f5ec; color:#14624c; font-size:12px; font-weight:bold; padding:3px 10px; border-radius:20px; margin-bottom:12px; }
-  .card a.visit { display:inline-block; margin-top:14px; color:#14624c; font-weight:bold; }
-  .price { text-align:center; }
-  .price .amount { font-size:34px; font-weight:bold; color:#0d3b2e; margin:10px 0; }
-  .price ul { list-style:none; text-align:left; margin:16px 0; }
-  .price ul li { padding:6px 0; border-bottom:1px solid #eef3f0; font-size:15px; }
-  .price ul li::before { content:"✓ "; color:#22a55b; font-weight:bold; }
-  .popular { border:2px solid #22a55b; }
-  .steps { counter-reset:step; }
-  .step { background:#fff; border:1px solid #e2ece6; border-radius:12px; padding:20px 24px; margin-bottom:14px; display:flex; gap:18px; align-items:flex-start; }
-  .step .num { background:#0d3b2e; color:#fff; width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; flex-shrink:0; }
-  .faq { background:#fff; border:1px solid #e2ece6; border-radius:12px; padding:22px 26px; margin-bottom:14px; }
-  .faq h3 { font-size:17px; color:#0d3b2e; margin-bottom:6px; }
-  .faq p { color:#44564e; font-size:15px; }
-  .contact { background:#0d3b2e; color:#fff; text-align:center; border-radius:14px; padding:48px 26px; }
-  .contact h2 { color:#fff; }
-  .contact p { color:#d9efe2; margin-bottom:24px; }
-  footer { text-align:center; padding:26px 0; color:#5a6f66; font-size:14px; }
-  .wa-float { position:fixed; right:20px; bottom:20px; background:#25D366; color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; box-shadow:0 4px 14px rgba(0,0,0,.3); z-index:50; }
-  .wa-float:hover { background:#1ebe5b; }
-  .btn.wa { background:#25D366; }
-  .btn.wa:hover { background:#1ebe5b; }
-  @media (max-width:600px){ .hero h1{font-size:29px;} nav a{margin-left:10px;} }
+  :root{
+    --green-950:#08271e; --green-900:#0d3b2e; --green-700:#14624c; --green-500:#22a55b;
+    --wa:#25D366; --wa-dark:#1ebe5b;
+    --ink:#182420; --muted:#5c6f66; --line:#e1ebe4;
+    --bg:#f6f9f7; --card:#ffffff; --soft:#edf5f0;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(13,59,46,.08);
+    --shadow-lg:0 22px 48px rgba(13,59,46,.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:92px}
+  body{font-family:"Inter",Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none;color:inherit}
+  svg{vertical-align:middle}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:100;background:rgba(8,39,30,.96);backdrop-filter:blur(10px);color:#fff;box-shadow:0 4px 20px rgba(0,0,0,.14)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+  .logo{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:800;letter-spacing:-.3px}
+  .logo .mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--green-500),#7bd88f);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+  .logo span.accent{color:#7bd88f}
+  .logo small{display:block;font-size:11px;font-weight:500;color:#a9d3ba;letter-spacing:.4px;text-transform:uppercase}
+  nav{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+  nav a{color:#d9efe2;font-size:14.5px;font-weight:500;padding:7px 13px;border-radius:999px;transition:.25s}
+  nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+  nav a.cta{background:var(--wa);color:#06281a;font-weight:700}
+  nav a.cta:hover{background:var(--wa-dark);color:#fff}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;background:radial-gradient(900px 420px at 85% -10%,rgba(123,216,143,.28),transparent 60%),linear-gradient(140deg,var(--green-950) 0%,var(--green-900) 48%,var(--green-700) 100%);color:#fff;text-align:center;padding:88px 0 78px}
+  .badge{display:inline-block;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.25);color:#cdeeda;font-size:13px;font-weight:600;letter-spacing:.4px;padding:7px 16px;border-radius:999px;margin-bottom:24px}
+  .hero h1{font-size:46px;line-height:1.22;font-weight:800;letter-spacing:-.8px;max-width:840px;margin:0 auto 18px}
+  .hero h1 .accent{color:#8fe3a8}
+  .hero p{font-size:18.5px;color:#d9efe2;max-width:720px;margin:0 auto 34px;line-height:1.7}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 30px;border-radius:999px;font-size:16px;font-weight:700;cursor:pointer;transition:.25s;border:1px solid transparent}
+  .btn.wa{background:var(--wa);color:#05281a;box-shadow:0 12px 26px rgba(37,211,102,.34)}
+  .btn.wa:hover{background:var(--wa-dark);color:#fff;transform:translateY(-2px)}
+  .btn.ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.4)}
+  .btn.ghost:hover{background:#fff;color:var(--green-900);transform:translateY(-2px)}
+  .btn.solid{background:var(--green-900);color:#fff}
+  .btn.solid:hover{background:var(--green-700);transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+
+  /* Stats */
+  .stats{background:#fff;border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding-top:24px;padding-bottom:24px;text-align:center}
+  .stat b{display:block;font-size:22px;color:var(--green-900);letter-spacing:-.4px}
+  .stat span{font-size:13.5px;color:var(--muted)}
+  .stat .tick{color:var(--green-500)}
+
+  /* Sections */
+  section{padding:76px 0}
+  section.alt{background:var(--soft)}
+  .kicker{text-align:center;color:var(--green-700);font-size:13px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:8px}
+  h2{font-size:32px;text-align:center;color:var(--green-950);letter-spacing:-.5px;line-height:1.3;margin-bottom:10px}
+  .sub{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 40px;font-size:16.5px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow);transition:.28s}
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:#cfe4d6}
+  .card .icon{width:54px;height:54px;border-radius:15px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:14px}
+  .card h3{font-size:19.5px;color:var(--green-950);letter-spacing:-.3px;margin-bottom:7px}
+  .card p{color:#44564e;font-size:15px}
+  .tag{display:inline-block;background:#e6f5ec;color:var(--green-700);font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:4px 11px;border-radius:999px;margin-bottom:12px}
+  a.visit{display:inline-block;margin-top:14px;color:var(--green-700);font-weight:700;font-size:15px}
+  a.visit:hover{color:var(--green-500)}
+
+  /* Pricing */
+  .price{text-align:center;display:flex;flex-direction:column}
+  .price .amount{font-size:36px;font-weight:800;color:var(--green-950);letter-spacing:-.8px;margin:6px 0 2px}
+  .price .amount small{font-size:14px;color:var(--muted);font-weight:500;letter-spacing:0}
+  .price ul{list-style:none;text-align:left;margin:16px 0 24px;flex:1}
+  .price ul li{padding:7px 0;border-bottom:1px dashed #e7efe9;font-size:15px}
+  .price ul li::before{content:"✓";color:var(--green-500);font-weight:800;margin-right:9px}
+  .price .btn{justify-content:center}
+  .popular{border:2px solid var(--green-500);position:relative;box-shadow:var(--shadow-lg)}
+  .popular .ribbon{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--green-500);color:#fff;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:5px 16px;border-radius:999px;white-space:nowrap}
+  .note{margin-top:28px;text-align:center;color:var(--muted);font-size:14.5px;max-width:780px;margin-right:auto;margin-left:auto}
+  .note b{color:var(--green-900)}
+
+  /* Steps */
+  .steps{max-width:820px;margin:0 auto;display:grid;gap:14px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;gap:18px;align-items:flex-start;box-shadow:var(--shadow);transition:.25s}
+  .step:hover{transform:translateX(4px);border-color:#cfe4d6}
+  .step .num{background:linear-gradient(135deg,var(--green-900),var(--green-700));color:#fff;min-width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 8px 16px rgba(13,59,46,.25)}
+  .step b{color:var(--green-950);font-size:16.5px;display:block;margin-bottom:2px}
+  .step p{color:#44564e;font-size:15px}
+
+  /* Why us */
+  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;text-align:center}
+  .why .item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 18px;box-shadow:var(--shadow)}
+  .why .item .icon{font-size:30px;margin-bottom:8px}
+  .why .item b{display:block;color:var(--green-950);font-size:16.5px;margin-bottom:4px}
+  .why .item p{color:var(--muted);font-size:14px}
+
+  /* FAQ */
+  .faq-wrap{max-width:820px;margin:0 auto;display:grid;gap:12px}
+  details.faq{background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px 24px;box-shadow:var(--shadow);transition:.25s}
+  details.faq[open]{border-color:#bfe0cd}
+  details.faq summary{cursor:pointer;font-weight:700;color:var(--green-950);font-size:16.5px;list-style:none;padding:14px 0}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary::after{content:"+";float:right;color:var(--green-500);font-size:22px;font-weight:700;line-height:1.2}
+  details.faq[open] summary::after{content:"−"}
+  details.faq p{color:#44564e;font-size:15px;padding-bottom:16px}
+
+  /* Contact */
+  .contact{background:radial-gradient(700px 300px at 15% 0%,rgba(123,216,143,.22),transparent 55%),linear-gradient(140deg,var(--green-950),var(--green-700));color:#fff;text-align:center;border-radius:26px;padding:58px 28px;box-shadow:var(--shadow-lg)}
+  .contact h2{color:#fff}
+  .contact p{color:#d9efe2;max-width:640px;margin:0 auto 28px}
+  .btn.light{background:#fff;color:var(--green-900)}
+  .btn.light:hover{background:#e6f5ec;transform:translateY(-2px)}
+
+  footer{text-align:center;padding:32px 0 40px;color:var(--muted);font-size:14px}
+  footer b{color:var(--green-900)}
+  footer a{color:var(--green-700);font-weight:700}
+
+  .wa-float{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(18,140,80,.42);z-index:200;transition:.25s}
+  .wa-float:hover{background:var(--wa-dark);transform:scale(1.07)}
+  .wa-float svg{width:32px;height:32px;fill:#fff}
+
+  @media (max-width:720px){
+    .stats .wrap{grid-template-columns:repeat(2,1fr)}
+    .hero{padding:62px 0 56px}
+    .hero h1{font-size:32px}
+    .hero p{font-size:16.5px}
+    h2{font-size:27px}
+    section{padding:56px 0}
+    nav{justify-content:center}
+    header .wrap{justify-content:center;text-align:center}
+    .popular{margin-top:14px}
+  }
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <div class="logo">Koh<span>Web</span></div>
+    <a class="logo" href="#">
+      <span class="mark">⛰️</span>
+      <span>Koh<span class="accent">Web</span><small>Professional Website Services</small></span>
+    </a>
     <nav>
-      <a href="#work">My Work</a>
+      <a href="#work">Our Work</a>
       <a href="#services">Services</a>
-      <a href="#prices">Prices</a>
-      <a href="#contact">Contact</a>
+      <a href="#prices">Packages</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a class="cta" href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <div class="hero">
   <div class="wrap">
-    <h1>Websites for Local Businesses<br>in <span>Gilgit & Across Pakistan</span></h1>
-    <p>Hotels, restaurants, shops aur academies ke liye professional website — WhatsApp button, Google Map aur mobile design ke saath, taake customer seedha aap se rabta kare.</p>
-    <a class="btn wa wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe apne business ke liye website banwani hai. Free demo ke baray mein maloomat chahiye.">WhatsApp Par Free Demo Mangwayein</a>
-    <a class="btn light" href="#work">See My Work</a>
+    <span class="badge">BASED IN GILGIT — SERVING BUSINESSES ACROSS PAKISTAN</span>
+    <h1>A Professional Website That Brings Customers <span class="accent">Directly to Your Business</span></h1>
+    <p>Whether you run a hotel, a restaurant, a shop or an academy, we design fast, elegant and mobile-friendly websites with a WhatsApp enquiry button and Google Maps integration — so customers can reach you in a single tap.</p>
+    <div class="hero-actions">
+      <a class="btn wa wa-btn" href="#contact" data-msg="Hello, I would like a website for my business. Please share details about the free demo."><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>Get a Free Demo on WhatsApp</a>
+      <a class="btn ghost" href="#work">View Our Work</a>
+    </div>
   </div>
 </div>
 
-<div class="trust">
+<div class="stats">
   <div class="wrap">
-    <b>✓ 2 Live Websites</b>
-    <b>✓ Delivery in 3–7 Days</b>
-    <b>✓ Mobile Friendly</b>
-    <b>✓ Basic SEO Included</b>
+    <div class="stat"><b><span class="tick">✓</span> 2</b><span>Live Websites Delivered</span></div>
+    <div class="stat"><b>3–7 Days</b><span>Fast, Reliable Delivery</span></div>
+    <div class="stat"><b>100%</b><span>Mobile-Friendly Design</span></div>
+    <div class="stat"><b>Included</b><span>Basic SEO Setup</span></div>
   </div>
 </div>
 
 <section id="work">
   <div class="wrap">
-    <h2>My Work</h2>
-    <p class="sub">Ye dono websites live hain — khud khol kar dekh sakte hain.</p>
+    <p class="kicker">Portfolio</p>
+    <h2>Our Work</h2>
+    <p class="sub">Both of these websites are live today. Open them and judge the quality, speed and design for yourself.</p>
     <div class="grid">
       <div class="card">
-        <span class="tag">TOOL WEBSITE</span>
+        <span class="tag">Tool Website</span>
         <h3>ScanText.online</h3>
-        <p>Free Image to Text (OCR) tool website. Photo se text nikalta hai — Urdu, Hindi aur Arabic ke pages ke saath, 58 pages aur blog. Google par indexed hai.</p>
+        <p>A free online image-to-text (OCR) platform with 58 pages, including dedicated Urdu, Hindi and Arabic tools and a blog. Indexed on Google and used by visitors from around the world.</p>
         <a class="visit" href="https://scantext.online" target="_blank" rel="noopener">Visit scantext.online →</a>
       </div>
       <div class="card">
-        <span class="tag">CALCULATOR WEBSITE</span>
+        <span class="tag">Calculator Website</span>
         <h3>QtyRight</h3>
-        <p>America ke home-improvement market ke liye 12 material calculators (concrete, paint, tile, flooring waghera) aur guides — kul 23 pages, tez aur mobile-friendly.</p>
+        <p>A material calculator platform built for the US home-improvement market: 12 calculators covering concrete, paint, tile, flooring and more, plus expert guides — 23 pages, fast and fully mobile-friendly.</p>
         <a class="visit" href="https://qtyright-hassanaskaribarcha005-9830s-projects.vercel.app" target="_blank" rel="noopener">Visit QtyRight →</a>
       </div>
       <div class="card">
-        <span class="tag">YOUR BUSINESS HERE</span>
-        <h3>Aap Ki Website?</h3>
-        <p>Agli website aap ke business ki ho sakti hai. Pehle free demo bana kar dunga — pasand aye to hi order karein, koi advance demo ke liye nahi lagta.</p>
-        <a class="visit" href="#contact">Free demo ke liye rabta karein →</a>
+        <div class="icon">✦</div>
+        <h3>Your Business Could Be Next</h3>
+        <p>We will build a free demo with your business name before you commit to anything. If you like what you see, we proceed — the demo costs you nothing and carries no obligation.</p>
+        <a class="visit" href="#contact">Request your free demo →</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="services" style="background:#eef5f1;">
+<section id="services" class="alt">
   <div class="wrap">
-    <h2>Services</h2>
-    <p class="sub">Jo website aap ke business ko chahiye, wahi milegi.</p>
+    <p class="kicker">Services</p>
+    <h2>What We Build</h2>
+    <p class="sub">Every business has different needs. We build the website that fits yours — and presents it professionally.</p>
     <div class="grid">
-      <div class="card">
-        <h3>Business Website</h3>
-        <p>Dukaan, clinic, salon ya kisi bhi business ke liye — services, photos, timing, location aur WhatsApp/call button.</p>
-      </div>
-      <div class="card">
-        <h3>Hotel & Tour Website</h3>
-        <p>Hotel, guest house aur tour operators ke liye — kamron ki photos, rates, aur WhatsApp booking button. Tourist Google se seedha aap tak.</p>
-      </div>
-      <div class="card">
-        <h3>Restaurant / Cafe Website</h3>
-        <p>Menu, photos, location aur order ke liye WhatsApp button — ek hi page par sab kuch.</p>
-      </div>
-      <div class="card">
-        <h3>Academy / School Website</h3>
-        <p>Courses, fees, admission ki maloomat aur contact form.</p>
-      </div>
-      <div class="card">
-        <h3>Online Store</h3>
-        <p>Products lagana, order lena — dry fruit, organic ya kisi bhi product ki dukaan ke liye.</p>
-      </div>
-      <div class="card">
-        <h3>Tool / Calculator Website</h3>
-        <p>ScanText aur QtyRight jaisi khaas tool websites — idea aap ka, banana mera kaam.</p>
-      </div>
+      <div class="card"><div class="icon">🏢</div><h3>Business Websites</h3><p>For shops, clinics, salons and service providers — your services, photos, timings, location and a WhatsApp and call button, presented with polish.</p></div>
+      <div class="card"><div class="icon">🏨</div><h3>Hotels &amp; Tourism</h3><p>For hotels, guest houses and tour operators — room galleries, rates and a WhatsApp booking button, so travellers find you on Google and book directly.</p></div>
+      <div class="card"><div class="icon">🍽️</div><h3>Restaurants &amp; Cafés</h3><p>Your menu, photos, location and a WhatsApp ordering button — everything your customers need, in one professional place.</p></div>
+      <div class="card"><div class="icon">🎓</div><h3>Academies &amp; Schools</h3><p>Courses, fee information, admissions details and an enquiry form — a website that earns the trust of students and parents alike.</p></div>
+      <div class="card"><div class="icon">🛒</div><h3>Online Stores</h3><p>For dry fruit, organic produce and retail businesses — a complete storefront setup for showcasing products and receiving orders online.</p></div>
+      <div class="card"><div class="icon">🧮</div><h3>Tools &amp; Calculators</h3><p>Custom tool websites like ScanText and QtyRight. You bring the idea — we turn it into a working product.</p></div>
     </div>
   </div>
 </section>
 
 <section id="prices">
   <div class="wrap">
-    <h2>Prices</h2>
-    <p class="sub">Saaf rates, koi chupa kharcha nahi. 50% advance, 50% website live honay par.</p>
+    <p class="kicker">Pricing</p>
+    <h2>Packages &amp; Pricing</h2>
+    <p class="sub">Transparent pricing with no hidden charges. A simple payment structure: 50% in advance, and the remaining 50% only when your website goes live.</p>
     <div class="grid">
       <div class="card price">
         <h3>Basic</h3>
         <div class="amount">Rs. 20,000</div>
         <ul>
-          <li>5 pages (Home, About, Services, Gallery, Contact)</li>
-          <li>WhatsApp + call button</li>
-          <li>Google Map location</li>
+          <li>5 pages: Home, About, Services, Gallery, Contact</li>
+          <li>WhatsApp and call buttons</li>
+          <li>Google Maps location</li>
           <li>Mobile-friendly design</li>
-          <li>Delivery: 3–5 din</li>
+          <li>Delivery within 3–5 days</li>
         </ul>
-        <a class="btn wa wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe BASIC package (Rs. 20,000) mein website banwani hai. Mere business ki details ye hain:">WhatsApp Par Order Karein</a>
+        <a class="btn solid wa wa-btn" href="#contact" data-msg="Hello, I am interested in the Basic package (Rs. 20,000) for my business website. My business details are:">Order on WhatsApp</a>
       </div>
       <div class="card price popular">
-        <span class="tag">SAB SE ZYADA PASAND</span>
+        <span class="ribbon">Most Popular</span>
         <h3>Standard</h3>
         <div class="amount">Rs. 35,000</div>
         <ul>
-          <li>Basic ki sab cheezein</li>
-          <li>10 pages tak</li>
-          <li>Contact / booking form</li>
-          <li>Basic SEO — Google mein anay ke liye</li>
-          <li>Facebook / Instagram links</li>
-          <li>Delivery: 5–7 din</li>
+          <li>Everything in the Basic package</li>
+          <li>Up to 10 pages</li>
+          <li>Contact and booking forms</li>
+          <li>Basic SEO, to be found on Google</li>
+          <li>Facebook and Instagram integration</li>
+          <li>Delivery within 5–7 days</li>
         </ul>
-        <a class="btn wa wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe STANDARD package (Rs. 35,000) mein website banwani hai. Mere business ki details ye hain:">WhatsApp Par Order Karein</a>
+        <a class="btn wa wa-btn" href="#contact" data-msg="Hello, I am interested in the Standard package (Rs. 35,000) for my business website. My business details are:">Order on WhatsApp</a>
       </div>
       <div class="card price">
         <h3>Premium</h3>
-        <div class="amount">Rs. 60,000+</div>
+        <div class="amount">Rs. 60,000<small>+</small></div>
         <ul>
-          <li>Online store ya tool/calculator website</li>
-          <li>Products / orders ki setup</li>
-          <li>Payment tareekay par rehnumai</li>
-          <li>Final price kaam dekh kar</li>
+          <li>Online store or custom tool / calculator website</li>
+          <li>Complete product and order setup</li>
+          <li>Guidance on payment methods</li>
+          <li>Final quotation after reviewing your requirements</li>
         </ul>
-        <a class="btn wa wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe PREMIUM website (online store / tool website) ke baray mein baat karni hai.">WhatsApp Par Baat Karein</a>
+        <a class="btn solid wa wa-btn" href="#contact" data-msg="Hello, I would like to discuss a Premium website (online store / custom tool) for my business.">Discuss on WhatsApp</a>
       </div>
     </div>
-    <p class="sub" style="margin-top:24px;">Note: Domain (website ka naam, masalan yourshop.com) ka kharcha alag hai — takreeban Rs. 4,000–6,000 saal ka — aur domain hamesha <b>aap ke apne naam</b> par hoga.</p>
+    <p class="note"><b>Please note:</b> The domain (your website name, for example yourshop.com) is charged separately — approximately Rs. 4,000–6,000 per year — and is always registered <b>in your own name</b>.</p>
   </div>
 </section>
 
-<section style="background:#eef5f1;">
+<section class="alt">
   <div class="wrap">
-    <h2>Kaam Ka Tareeka</h2>
-    <p class="sub">5 asan steps mein aap ki website live.</p>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><div><b>Baat cheet + free demo</b><br>Aap apne business ke baray mein batayein, main demo bana kar dikha dunga.</div></div>
-      <div class="step"><div class="num">2</div><div><b>Package final + 50% advance</b><br>JazzCash, EasyPaisa ya bank transfer se.</div></div>
-      <div class="step"><div class="num">3</div><div><b>Details bhejein</b><br>Business ka naam, logo, photos, WhatsApp number aur address.</div></div>
-      <div class="step"><div class="num">4</div><div><b>Website banti hai</b><br>Preview link par aap ko dikha dunga, tabdeeli chahiye to bata dein.</div></div>
-      <div class="step"><div class="num">5</div><div><b>Live + baqi payment</b><br>Website live, baqi 50% payment, aur aap ko link + choti si guide mil jayegi.</div></div>
+    <p class="kicker">Why KohWeb</p>
+    <h2>Why Businesses Choose Us</h2>
+    <p class="sub">&nbsp;</p>
+    <div class="why">
+      <div class="item"><div class="icon">🤝</div><b>Free Demo First</b><p>See a demo of your own business website before you pay anything.</p></div>
+      <div class="item"><div class="icon">💎</div><b>Transparent Pricing</b><p>The price we quote is the price you pay. No hidden charges, ever.</p></div>
+      <div class="item"><div class="icon">🔑</div><b>You Own Everything</b><p>Your domain and your website are registered in your name — fully yours.</p></div>
+      <div class="item"><div class="icon">📞</div><b>Direct Communication</b><p>No middlemen. You speak directly with the person building your website.</p></div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="process">
   <div class="wrap">
-    <h2>Aam Sawalat</h2>
-    <p class="sub">&nbsp;</p>
-    <div class="faq"><h3>Domain kis ke naam par hoga?</h3><p>Domain hamesha aap ke apne naam par register hoga. Website aap ki property hai, meri nahi.</p></div>
-    <div class="faq"><h3>Payment kaise hogi?</h3><p>50% advance kaam shuru honay par, 50% website live honay ke baad. JazzCash, EasyPaisa ya bank transfer.</p></div>
-    <div class="faq"><h3>Website kitne din mein banegi?</h3><p>Basic 3–5 din, Standard 5–7 din — jab aap photos aur details bhej dein.</p></div>
-    <div class="faq"><h3>Live honay ke baad tabdeeli ho sakti hai?</h3><p>Live honay ke baad 2 dafa choti tabdeeli (number, photo, text) free hai. Bari tabdeeli ka rate pehle bata dunga.</p></div>
-    <div class="faq"><h3>Kya website Google par pehle number par ayegi?</h3><p>Website mein basic SEO shamil hai jo Google mein anay mein madad karta hai, lekin ranking mein waqt lagta hai — is ki jhooti guarantee koi nahi de sakta.</p></div>
+    <p class="kicker">Our Process</p>
+    <h2>How It Works</h2>
+    <p class="sub">Your website goes live in five simple, clearly defined steps.</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><b>Consultation &amp; Free Demo</b><p>Tell us about your business, and we will prepare a free demo for you to review.</p></div></div>
+      <div class="step"><div class="num">2</div><div><b>Package Confirmation &amp; Advance</b><p>Once you approve the demo, confirm your package with a 50% advance via JazzCash, EasyPaisa or bank transfer.</p></div></div>
+      <div class="step"><div class="num">3</div><div><b>Content Collection</b><p>Send us your business name, logo, photographs, WhatsApp number and address — we will guide you through exactly what is needed.</p></div></div>
+      <div class="step"><div class="num">4</div><div><b>Design &amp; Development</b><p>We build your website and share a private preview link, so you can request any changes before launch.</p></div></div>
+      <div class="step"><div class="num">5</div><div><b>Launch &amp; Final Payment</b><p>Your website goes live, the remaining 50% is settled, and you receive your link along with a short guide to using it.</p></div></div>
+    </div>
   </div>
 </section>
 
-<section id="contact" style="padding-top:0;">
+<section id="faq" class="alt">
+  <div class="wrap">
+    <p class="kicker">FAQ</p>
+    <h2>Frequently Asked Questions</h2>
+    <p class="sub">&nbsp;</p>
+    <div class="faq-wrap">
+      <details class="faq"><summary>Will the domain be registered in my name?</summary><p>Yes, always. The domain is registered in your own name and the website is your property, not ours — you are free to move it at any time.</p></details>
+      <details class="faq"><summary>How does payment work?</summary><p>50% in advance when the work begins, and the remaining 50% after your website goes live. We accept JazzCash, EasyPaisa and bank transfer.</p></details>
+      <details class="faq"><summary>How long will my website take?</summary><p>The Basic package takes 3–5 days and the Standard package 5–7 days, provided your photographs and details reach us on time.</p></details>
+      <details class="faq"><summary>Can I request changes after launch?</summary><p>Yes. Two rounds of minor changes (a number, a photograph or text) are free after launch. For larger changes, we will always quote the price in advance.</p></details>
+      <details class="faq"><summary>Will my website rank first on Google?</summary><p>Every website includes a basic SEO setup that helps it appear on Google, but rankings take time — and no honest provider can guarantee a first-place ranking. We will never promise you one.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:20px">
   <div class="wrap">
     <div class="contact">
-      <h2>Free Demo Chahiye?</h2>
-      <p>Pehle demo, pasand aye to hi order. WhatsApp button dabayein — seedha meri WhatsApp chat khul jayegi, ready-made message ke saath.</p>
-      <a class="btn wa wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe apne business ke liye website banwani hai. Free demo ke baray mein maloomat chahiye.%0ABusiness ka naam:%0AKis cheez ka business hai:">WhatsApp Karein</a>
-      <a class="btn light" href="mailto:hassanaskaribarcha005@gmail.com?subject=Website%20ke%20baray%20mein%20maloomat&body=Assalam-o-Alaikum,%20mujhe%20apne%20business%20ke%20liye%20website%20banwani%20hai.%0ABusiness%20ka%20naam:%0AKis%20cheez%20ka%20business%20hai:">Email Karein</a>
+      <h2>Request Your Free Demo</h2>
+      <p>See the demo first — place an order only if you love it. Tap the button below and our WhatsApp chat will open with a message already prepared for you.</p>
+      <div class="hero-actions">
+        <a class="btn wa wa-btn" href="#contact" data-msg="Hello, I would like a website for my business and would like to request a free demo.%0ABusiness name:%0AType of business:"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>Chat on WhatsApp</a>
+        <a class="btn light" href="mailto:hassanaskaribarcha005@gmail.com?subject=Website%20enquiry&body=Hello,%20I%20would%20like%20a%20website%20for%20my%20business.%0ABusiness%20name:%0AType%20of%20business:">Email Us</a>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
-  KohWeb — Websites for local businesses in Gilgit & Pakistan<br>
-  Portfolio: <a href="https://scantext.online" target="_blank" rel="noopener">scantext.online</a>
+  <b>KohWeb</b> — Professional websites for local businesses in Gilgit &amp; across Pakistan<br>
+  Our work: <a href="https://scantext.online" target="_blank" rel="noopener">scantext.online</a>
 </footer>
 
-<a class="wa-float wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe apne business ke liye website banwani hai." title="WhatsApp par rabta karein" aria-label="WhatsApp">✆</a>
+<a class="wa-float wa-btn" href="#contact" data-msg="Hello, I would like a website for my business." title="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg></a>
 
 <script>
 // ============================================================
-// WHATSAPP NUMBER — SIRF YE EK LINE TABDEEL HOTI HAI
-// Number is format mein likhein: country code + number, baghair 0 aur baghair dashes
-// Masalan: 923001234567
+// WHATSAPP NUMBER — only this one line ever changes
+// Format: country code + number, without the leading 0 and without dashes
+// Example: 923001234567
 var WHATSAPP_NUMBER = "923298631015";
 // ============================================================
 (function () {
@@ -252,7 +352,7 @@ var WHATSAPP_NUMBER = "923298631015";
   var ready = digits.length >= 10;
   document.querySelectorAll(".wa-btn").forEach(function (btn) {
     if (ready) {
-      var msg = btn.getAttribute("data-msg") || "Assalam-o-Alaikum, mujhe website banwani hai.";
+      var msg = btn.getAttribute("data-msg") || "Hello, I would like a website for my business.";
       btn.setAttribute("href", "https://wa.me/" + digits + "?text=" + encodeURIComponent(msg.replace(/%0A/g, "\n")));
       btn.setAttribute("target", "_blank");
       btn.setAttribute("rel", "noopener");
