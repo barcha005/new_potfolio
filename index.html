@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Services in Gilgit — Business Websites, Hotels, Shops & Academies</title>
-<meta name="description" content="Professional websites for local businesses in Gilgit and across Pakistan. Hotels, restaurants, shops and academies. WhatsApp button, Google Map, mobile design and basic SEO. Prices from Rs. 20,000.">
+<title>KohWeb — Website Services in Gilgit | Business Websites, Hotels, Shops & Academies</title>
+<meta name="description" content="KohWeb: Professional websites for local businesses in Gilgit and across Pakistan. Hotels, restaurants, shops and academies. WhatsApp button, Google Map, mobile design and basic SEO. Prices from Rs. 20,000.">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family: Arial, Helvetica, sans-serif; color:#1a2b25; background:#f7faf8; line-height:1.6; }
@@ -50,6 +50,10 @@
   .contact h2 { color:#fff; }
   .contact p { color:#d9efe2; margin-bottom:24px; }
   footer { text-align:center; padding:26px 0; color:#5a6f66; font-size:14px; }
+  .wa-float { position:fixed; right:20px; bottom:20px; background:#25D366; color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; box-shadow:0 4px 14px rgba(0,0,0,.3); z-index:50; }
+  .wa-float:hover { background:#1ebe5b; }
+  .btn.wa { background:#25D366; }
+  .btn.wa:hover { background:#1ebe5b; }
   @media (max-width:600px){ .hero h1{font-size:29px;} nav a{margin-left:10px;} }
 </style>
 </head>
@@ -57,7 +61,7 @@
 
 <header>
   <div class="wrap">
-    <div class="logo">Gilgit<span>Web</span> Services</div>
+    <div class="logo">Koh<span>Web</span></div>
     <nav>
       <a href="#work">My Work</a>
       <a href="#services">Services</a>
@@ -71,7 +75,7 @@
   <div class="wrap">
     <h1>Websites for Local Businesses<br>in <span>Gilgit & Across Pakistan</span></h1>
     <p>Hotels, restaurants, shops aur academies ke liye professional website — WhatsApp button, Google Map aur mobile design ke saath, taake customer seedha aap se rabta kare.</p>
-    <a class="btn" href="#contact">Get a Free Demo</a>
+    <a class="btn wa wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe apne business ke liye website banwani hai. Free demo ke baray mein maloomat chahiye.">WhatsApp Par Free Demo Mangwayein</a>
     <a class="btn light" href="#work">See My Work</a>
   </div>
 </div>
@@ -160,7 +164,7 @@
           <li>Mobile-friendly design</li>
           <li>Delivery: 3–5 din</li>
         </ul>
-        <a class="btn" href="#contact">Order Basic</a>
+        <a class="btn wa wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe BASIC package (Rs. 20,000) mein website banwani hai. Mere business ki details ye hain:">WhatsApp Par Order Karein</a>
       </div>
       <div class="card price popular">
         <span class="tag">SAB SE ZYADA PASAND</span>
@@ -174,7 +178,7 @@
           <li>Facebook / Instagram links</li>
           <li>Delivery: 5–7 din</li>
         </ul>
-        <a class="btn" href="#contact">Order Standard</a>
+        <a class="btn wa wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe STANDARD package (Rs. 35,000) mein website banwani hai. Mere business ki details ye hain:">WhatsApp Par Order Karein</a>
       </div>
       <div class="card price">
         <h3>Premium</h3>
@@ -185,7 +189,7 @@
           <li>Payment tareekay par rehnumai</li>
           <li>Final price kaam dekh kar</li>
         </ul>
-        <a class="btn" href="#contact">Baat Karein</a>
+        <a class="btn wa wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe PREMIUM website (online store / tool website) ke baray mein baat karni hai.">WhatsApp Par Baat Karein</a>
       </div>
     </div>
     <p class="sub" style="margin-top:24px;">Note: Domain (website ka naam, masalan yourshop.com) ka kharcha alag hai — takreeban Rs. 4,000–6,000 saal ka — aur domain hamesha <b>aap ke apne naam</b> par hoga.</p>
@@ -222,17 +226,42 @@
   <div class="wrap">
     <div class="contact">
       <h2>Free Demo Chahiye?</h2>
-      <p>Pehle demo, pasand aye to hi order. Email par rabta karein — jawab 24 ghantay ke andar.</p>
-      <!-- WHATSAPP NUMBER: jab user apna number dega to yahan WhatsApp button lagaya jayega -->
-      <a class="btn" href="mailto:hassanaskaribarcha005@gmail.com?subject=Website%20ke%20baray%20mein%20maloomat&body=Assalam-o-Alaikum,%20mujhe%20apne%20business%20ke%20liye%20website%20banwani%20hai.%0ABusiness%20ka%20naam:%0AKis%20cheez%20ka%20business%20hai:">Email Karein</a>
+      <p>Pehle demo, pasand aye to hi order. WhatsApp button dabayein — seedha meri WhatsApp chat khul jayegi, ready-made message ke saath.</p>
+      <a class="btn wa wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe apne business ke liye website banwani hai. Free demo ke baray mein maloomat chahiye.%0ABusiness ka naam:%0AKis cheez ka business hai:">WhatsApp Karein</a>
+      <a class="btn light" href="mailto:hassanaskaribarcha005@gmail.com?subject=Website%20ke%20baray%20mein%20maloomat&body=Assalam-o-Alaikum,%20mujhe%20apne%20business%20ke%20liye%20website%20banwani%20hai.%0ABusiness%20ka%20naam:%0AKis%20cheez%20ka%20business%20hai:">Email Karein</a>
     </div>
   </div>
 </section>
 
 <footer>
-  GilgitWeb Services — Websites for local businesses in Gilgit & Pakistan<br>
+  KohWeb — Websites for local businesses in Gilgit & Pakistan<br>
   Portfolio: <a href="https://scantext.online" target="_blank" rel="noopener">scantext.online</a>
 </footer>
+
+<a class="wa-float wa-btn" href="#contact" data-msg="Assalam-o-Alaikum, mujhe apne business ke liye website banwani hai." title="WhatsApp par rabta karein" aria-label="WhatsApp">✆</a>
+
+<script>
+// ============================================================
+// WHATSAPP NUMBER — SIRF YE EK LINE TABDEEL HOTI HAI
+// Number is format mein likhein: country code + number, baghair 0 aur baghair dashes
+// Masalan: 923001234567
+var WHATSAPP_NUMBER = "923298631015";
+// ============================================================
+(function () {
+  var digits = WHATSAPP_NUMBER.replace(/\D/g, "");
+  var ready = digits.length >= 10;
+  document.querySelectorAll(".wa-btn").forEach(function (btn) {
+    if (ready) {
+      var msg = btn.getAttribute("data-msg") || "Assalam-o-Alaikum, mujhe website banwani hai.";
+      btn.setAttribute("href", "https://wa.me/" + digits + "?text=" + encodeURIComponent(msg.replace(/%0A/g, "\n")));
+      btn.setAttribute("target", "_blank");
+      btn.setAttribute("rel", "noopener");
+    } else {
+      btn.setAttribute("href", "#contact");
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
